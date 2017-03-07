@@ -1,0 +1,92 @@
+# http://www.ruanyifeng.com/blog/2016/07/yaml.html?f=tt
+port: 8092
+debug: false
+proc_title: go_api_server
+database:
+    default:
+        host: 192.168.199.225
+        port: 3306
+        user: user_name
+        password: password
+        db_name: db_name
+    read:
+        host: 192.168.199.225
+        port: 3306
+        user: user_name
+        password: password
+        db_name: db_name
+    data:
+        host: 192.168.199.225
+        port: 3306
+        user: user_name
+        password: password
+        db_name: db_name_data
+    uc_read:
+        host: 192.168.199.224
+        port: 3307
+        user: usertest
+        password: user_db_test
+        db_name: db_user
+    db_score_common: &db_score
+        host: 192.168.199.224
+        port: 3307
+        user: usertest
+        password: user_db_test
+    score_1:
+        <<: *db_score
+        db_name: db_score_0
+    score_2:
+        <<: *db_score
+        db_name: db_score_1
+    score_3:
+        <<: *db_score
+        db_name: db_score_3
+    score_4:
+        <<: *db_score
+        db_name: db_score_4
+    score_5:
+        <<: *db_score
+        db_name: db_score_5
+    score_6:
+        <<: *db_score
+        db_name: db_score_6
+    score_7:
+        <<: *db_score
+        db_name: db_score_7
+    score_8:
+        <<: *db_score
+        db_name: db_score_8
+    score_9:
+        <<: *db_score
+        db_name: db_score_9
+
+cache:
+    default:
+        host: 192.168.199.224
+        port: 6379
+        db: 6
+        password: ""
+    ad:
+        host: 192.168.199.224
+        port: 6380
+        db: 1
+        password: ""
+    ad_slave:
+        host: 192.168.199.224
+        port: 6379
+        db: 1
+        password: ""
+
+user_service_list:
+    server:
+        - 192.168.199.224
+    port:
+        - 9091
+
+api_domain: xxxxx.xxxxxxx.com
+admin_domain: xxxxxxx.xxxxxxx.com
+
+broker: redis://192.168.199.224:6379/1
+
+
+user_login_key: xxxxxxxxxx
