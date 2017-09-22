@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"os/user"
 	"path/filepath"
 	"reflect"
@@ -26,7 +27,7 @@ func check(log *log.Logger, e error) {
 
 func init() {
 	//	file_name := "./config/server.yaml"
-	file_name := "/home/kevin/data_bk/go/src/learn/server/config/server.yaml"
+	file_name := "/home/kevin/data_bk/go/src/learn/go_server/config/server.yaml"
 	// path convert
 	if !filepath.IsAbs(file_name) {
 		if strings.HasPrefix(file_name, "~/") {
@@ -40,6 +41,10 @@ func init() {
 			fmt.Println("file path ->", file_name)
 			check(nil, err)
 		}
+	}
+
+	if _, err := os.Stat(file_name); os.IsNotExist(err) {
+		fmt.Printf("conf file not found !!! %s\n", file_name)
 	}
 
 	data, err := ioutil.ReadFile(file_name)

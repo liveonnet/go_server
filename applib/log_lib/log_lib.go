@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"learn/server/applib/conf_lib"
+	"learn/go_server/applib/conf_lib"
 )
 
 var Log *log.Logger

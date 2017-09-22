@@ -5,7 +5,7 @@ import (
 	"log"
 	"sort"
 
-	"learn/server/applib/log_lib"
+	"learn/go_server/applib/log_lib"
 
 	"gopkg.in/gin-gonic/gin.v1"
 )

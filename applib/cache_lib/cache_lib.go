@@ -6,9 +6,9 @@ package cache_lib
 
 import (
 	"fmt"
-	"learn/server/applib/conf_lib"
-	"learn/server/applib/log_lib"
-	"learn/server/applib/tools_lib"
+	"learn/go_server/applib/conf_lib"
+	"learn/go_server/applib/log_lib"
+	"learn/go_server/applib/tools_lib"
 	"log"
 
 	"gopkg.in/gin-gonic/gin.v1"

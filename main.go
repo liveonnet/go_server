@@ -15,13 +15,13 @@ import (
 
 	redis "gopkg.in/redis.v5"
 
-	"learn/server/applib/cache_lib"
-	"learn/server/applib/comm_lib"
-	"learn/server/applib/conf_lib"
-	"learn/server/applib/db_lib"
-	"learn/server/applib/log_lib"
-	"learn/server/applib/tools_lib"
-	"learn/server/applib/user_lib"
+	"learn/go_server/applib/cache_lib"
+	"learn/go_server/applib/comm_lib"
+	"learn/go_server/applib/conf_lib"
+	"learn/go_server/applib/db_lib"
+	"learn/go_server/applib/log_lib"
+	"learn/go_server/applib/tools_lib"
+	"learn/go_server/applib/user_lib"
 )
 
 //func check(log *log.Logger, e error, prefix string, postfix string) {

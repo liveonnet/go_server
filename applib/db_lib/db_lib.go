@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"log"
 
-	"learn/server/applib/conf_lib"
-	"learn/server/applib/log_lib"
-	"learn/server/applib/tools_lib"
+	"learn/go_server/applib/conf_lib"
+	"learn/go_server/applib/log_lib"
+	"learn/go_server/applib/tools_lib"
 
 	_ "github.com/go-sql-driver/mysql"
 	"gopkg.in/gin-gonic/gin.v1"
@@ -97,6 +97,7 @@ func QueryRowsRaw(db *sql.DB, close bool, sql_str string, args ...interface{}) (
 	return rslt, col_name, err
 }
 
+/*
 func _GetDBOld(db_name string) (db *sql.DB, err error) {
 	var ok bool
 	if db, ok = m_db[db_name]; !ok {
@@ -117,6 +118,7 @@ func _GetDBOld(db_name string) (db *sql.DB, err error) {
 
 	return db, err
 }
+*/
 
 func GetDB(db_name string) (db *sql.DB, err error) {
 	var ok bool
